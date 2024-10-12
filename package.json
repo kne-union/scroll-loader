@@ -1,6 +1,6 @@
 {
   "name": "@kne/scroll-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "滚动加载下一页数据",
   "syntax": {
     "esmodules": true
@@ -50,7 +50,7 @@
   "bugs": {
     "url": "https://github.com/kne-union/scroll-loader/issues"
   },
-  "homepage": "https://www.kne-union.top/#/libs/ScrollLoader",
+  "homepage": "https://github.com/kne-union/scroll-loader",
   "eslintConfig": {
     "extends": [
       "react-app",
