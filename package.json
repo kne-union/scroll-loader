@@ -71,7 +71,8 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-dom": "*"
+    "react-dom": "*",
+    "antd": ">=5"
   },
   "devDependencies": {
     "@kne/microbundle": "^0.15.5",
@@ -82,5 +83,11 @@
     "prettier": "^3.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@kne/use-ref-callback": "^0.1.2",
+    "classnames": "^2.5.1",
+    "simplebar-react": "^3.2.6",
+    "use-debounce": "^10.0.3"
   }
 }
