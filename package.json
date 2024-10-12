@@ -1,6 +1,6 @@
 {
   "name": "@kne/scroll-loader",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "滚动加载下一页数据",
   "syntax": {
     "esmodules": true
@@ -70,9 +70,9 @@
     ]
   },
   "peerDependencies": {
+    "antd": ">=5",
     "react": "*",
-    "react-dom": "*",
-    "antd": ">=5"
+    "react-dom": "*"
   },
   "devDependencies": {
     "@kne/microbundle": "^0.15.5",
@@ -85,8 +85,10 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
+    "@kne/react-fetch": "^1.5.4",
     "@kne/use-ref-callback": "^0.1.2",
     "classnames": "^2.5.1",
+    "lodash": "^4.17.21",
     "simplebar-react": "^3.2.6",
     "use-debounce": "^10.0.3"
   }

@@ -2,7 +2,7 @@
   "isFull": false,
   "list": [
     {
-      "title": "scroll-loader",
+      "title": "ScrollLoader",
       "description": "滚动到底后自动加载下一页数据",
       "code": "./base.js",
       "scope": [
@@ -14,6 +14,22 @@
         {
           "name": "_reactFetch",
           "packageName": "@kne/react-fetch"
+        },
+        {
+          "name": "lodash",
+          "packageName": "lodash"
+        }
+      ]
+    },
+    {
+      "title": "FetchScrollLoader",
+      "description": "封装了数据获取",
+      "code": "./fetch.js",
+      "scope": [
+        {
+          "name": "_ScrollLoader",
+          "packageName": "@kne/current-lib_scroll-loader",
+          "importStatement": "import * as _ScrollLoader from \"@kne/scroll-loader\""
         },
         {
           "name": "lodash",
