@@ -6,7 +6,7 @@ import merge from 'lodash/merge';
 import { isNotEmpty } from '@kne/is-empty';
 
 const FetchScrollLoader = props => {
-  const { dataFormat, mergeList, searchText, completeTips, api, getSearchProps, children, ...others } = Object.assign(
+  const { dataFormat, mergeList, completeTips, api, searchProps, getSearchProps, children, ...others } = Object.assign(
     {},
     {
       api: {
@@ -47,17 +47,17 @@ const FetchScrollLoader = props => {
     props.pagination
   );
 
-  const computedSearchProps = searchText => {
-    if (getSearchProps && searchText) {
-      const searchProps = getSearchProps(searchText);
-      return isNotEmpty(searchProps) ? { [pagination.paramsType]: searchProps } : {};
+  const computedSearchProps = searchProps => {
+    if (getSearchProps && isNotEmpty(searchProps)) {
+      const requestProps = getSearchProps(searchProps);
+      return isNotEmpty(requestProps) ? { [pagination.paramsType]: requestProps } : {};
     }
     return {};
   };
 
   return (
     <Fetch
-      {...Object.assign({}, api, computedSearchProps(searchText))}
+      {...Object.assign({}, api, computedSearchProps(searchProps))}
       render={fetchApi => {
         const formatData = dataFormat(fetchApi.data);
         const current = get(fetchApi.requestParams, [pagination.paramsType, pagination.current], 1),
