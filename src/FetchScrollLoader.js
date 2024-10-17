@@ -3,6 +3,7 @@ import Fetch from '@kne/react-fetch';
 import ScrollLoader from './ScrollLoader';
 import get from 'lodash/get';
 import merge from 'lodash/merge';
+import { isNotEmpty } from '@kne/is-empty';
 
 const FetchScrollLoader = props => {
   const { dataFormat, mergeList, searchText, completeTips, api, getSearchProps, children, ...others } = Object.assign(
@@ -46,9 +47,17 @@ const FetchScrollLoader = props => {
     props.pagination
   );
 
+  const computedSearchProps = searchText => {
+    if (getSearchProps && searchText) {
+      const searchProps = getSearchProps(searchText);
+      return isNotEmpty(searchProps) ? { [pagination.paramsType]: searchProps } : {};
+    }
+    return {};
+  };
+
   return (
     <Fetch
-      {...Object.assign({}, api)}
+      {...Object.assign({}, api, computedSearchProps(searchText))}
       render={fetchApi => {
         const formatData = dataFormat(fetchApi.data);
         const current = get(fetchApi.requestParams, [pagination.paramsType, pagination.current], 1),
@@ -64,9 +73,7 @@ const FetchScrollLoader = props => {
                   [pagination.current]: current + 1
                 }
               },
-              getSearchProps && {
-                [pagination.paramsType]: getSearchProps(searchText)
-              }
+              computedSearchProps(searchText)
             ),
             mergeList
           );

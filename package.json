@@ -1,6 +1,6 @@
 {
   "name": "@kne/scroll-loader",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "滚动加载下一页数据",
   "syntax": {
     "esmodules": true
@@ -85,6 +85,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
+    "@kne/is-empty": "^1.0.1",
     "@kne/react-fetch": "^1.5.4",
     "@kne/use-ref-callback": "^0.1.2",
     "classnames": "^2.5.1",
