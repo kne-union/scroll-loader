@@ -1,6 +1,6 @@
 {
   "name": "@kne/scroll-loader",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "滚动加载下一页数据",
   "syntax": {
     "esmodules": true
