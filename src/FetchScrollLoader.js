@@ -73,7 +73,7 @@ const FetchScrollLoader = props => {
                   [pagination.current]: current + 1
                 }
               },
-              computedSearchProps(searchText)
+              computedSearchProps(searchProps)
             ),
             mergeList
           );
