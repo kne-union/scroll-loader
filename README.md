@@ -4,7 +4,7 @@
 
 ### 描述
 
-滚动加载下一页数据
+滚动加载下一页数据.
 
 
 ### 安装
@@ -28,7 +28,7 @@ npm i --save @kne/scroll-loader
 
 - ScrollLoader
 - 滚动到底后自动加载下一页数据
-- _ScrollLoader(@kne/current-lib_scroll-loader)[import * as _ScrollLoader from "@kne/scroll-loader"],_reactFetch(@kne/react-fetch),lodash(lodash)
+- _ScrollLoader(@kne/current-lib_scroll-loader)[import * as _ScrollLoader from "@kne/scroll-loader"],(@kne/current-lib_scroll-loader/dist/index.css),_reactFetch(@kne/react-fetch),lodash(lodash)
 
 ```jsx
 const { get, merge, range } = lodash;
@@ -65,7 +65,6 @@ const BaseExample = () => {
         list: fetchApi.data.pageData, total: fetchApi.data.totalCount
       };
       return (<ScrollLoader
-        completeTips=""
         className="scroll-list"
         isLoading={!fetchApi.isComplete}
         noMore={!formatData.total || current * pageSize >= formatData.total}
@@ -95,7 +94,7 @@ render(<BaseExample />);
 
 - FetchScrollLoader
 - 封装了数据获取
-- _ScrollLoader(@kne/current-lib_scroll-loader)[import * as _ScrollLoader from "@kne/scroll-loader"],lodash(lodash)
+- _ScrollLoader(@kne/current-lib_scroll-loader)[import * as _ScrollLoader from "@kne/scroll-loader"],(@kne/current-lib_scroll-loader/dist/index.css),lodash(lodash)
 
 ```jsx
 const { get, merge, range } = lodash;

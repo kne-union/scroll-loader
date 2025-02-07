@@ -12,6 +12,9 @@
           "importStatement": "import * as _ScrollLoader from \"@kne/scroll-loader\""
         },
         {
+          "packageName": "@kne/current-lib_scroll-loader/dist/index.css"
+        },
+        {
           "name": "_reactFetch",
           "packageName": "@kne/react-fetch"
         },
@@ -30,6 +33,9 @@
           "name": "_ScrollLoader",
           "packageName": "@kne/current-lib_scroll-loader",
           "importStatement": "import * as _ScrollLoader from \"@kne/scroll-loader\""
+        },
+        {
+          "packageName": "@kne/current-lib_scroll-loader/dist/index.css"
         },
         {
           "name": "lodash",
