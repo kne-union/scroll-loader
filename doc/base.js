@@ -32,7 +32,6 @@ const BaseExample = () => {
         list: fetchApi.data.pageData, total: fetchApi.data.totalCount
       };
       return (<ScrollLoader
-        completeTips=""
         className="scroll-list"
         isLoading={!fetchApi.isComplete}
         noMore={!formatData.total || current * pageSize >= formatData.total}
