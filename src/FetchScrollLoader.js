@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import Fetch from '@kne/react-fetch';
 import ScrollLoader from './ScrollLoader';
 import get from 'lodash/get';
 import merge from 'lodash/merge';
 import { isNotEmpty } from '@kne/is-empty';
 
-const FetchScrollLoader = props => {
-  const { dataFormat, mergeList, api, searchProps, getSearchProps, children, ...others } = Object.assign(
+const FetchScrollLoader = forwardRef((props, ref) => {
+  const { dataFormat, mergeList, api, searchProps, getSearchProps, children, render, ...others } = Object.assign(
     {},
     {
       api: {
@@ -31,6 +31,9 @@ const FetchScrollLoader = props => {
       children: props => {
         console.log(props);
         return null;
+      },
+      render: ({ fetchApi, children }) => {
+        return children;
       }
     },
     props
@@ -76,14 +79,18 @@ const FetchScrollLoader = props => {
           );
         };
 
-        return (
-          <ScrollLoader {...others} isLoading={!fetchApi.isComplete} noMore={noMore} onLoader={onLoader}>
-            {children({ fetchApi, list: formatData.list, data: fetchApi.data })}
-          </ScrollLoader>
-        );
+        return render({
+          fetchApi,
+          children: (
+            <ScrollLoader {...others} isLoading={!fetchApi.isComplete} noMore={noMore} onLoader={onLoader}>
+              {children({ fetchApi, list: formatData.list, data: fetchApi.data })}
+            </ScrollLoader>
+          )
+        });
       }}
+      ref={ref}
     />
   );
-};
+});
 
 export default FetchScrollLoader;
