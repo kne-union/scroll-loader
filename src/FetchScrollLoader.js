@@ -60,7 +60,7 @@ const FetchScrollLoader = forwardRef((props, ref) => {
 
   return (
     <Fetch
-      {...Object.assign({}, api, computedSearchProps(searchProps))}
+      {...merge({}, api, computedSearchProps(searchProps))}
       render={fetchApi => {
         const formatData = dataFormat(fetchApi.data);
         const current = get(fetchApi.requestParams, [pagination.paramsType, pagination.current], 1),
