@@ -3,7 +3,7 @@
   "list": [
     {
       "title": "ScrollLoader",
-      "description": "滚动到底后自动加载下一页数据",
+      "description": "基础滚动加载组件，结合 Fetch 手动管理分页逻辑；移动端自动使用视口滚动，桌面端使用 SimpleBar 容器滚动",
       "code": "./base.js",
       "scope": [
         {
@@ -21,12 +21,21 @@
         {
           "name": "lodash",
           "packageName": "lodash"
+        },
+        {
+          "name": "antd",
+          "packageName": "antd"
+        },
+        {
+          "name": "_ResponsiveUtils",
+          "packageName": "@kne/responsive-utils",
+          "importStatement": "import * as _ResponsiveUtils from \"@kne/responsive-utils\""
         }
       ]
     },
     {
       "title": "FetchScrollLoader",
-      "description": "封装了数据获取",
+      "description": "集成数据获取的滚动加载组件，支持搜索过滤、自定义分页；移动端自动使用视口滚动加载",
       "code": "./fetch.js",
       "scope": [
         {
@@ -38,8 +47,13 @@
           "packageName": "@kne/current-lib_scroll-loader/dist/index.css"
         },
         {
-          "name": "lodash",
-          "packageName": "lodash"
+          "name": "antd",
+          "packageName": "antd"
+        },
+        {
+          "name": "_ResponsiveUtils",
+          "packageName": "@kne/responsive-utils",
+          "importStatement": "import * as _ResponsiveUtils from \"@kne/responsive-utils\""
         }
       ]
     }
