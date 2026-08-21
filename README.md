@@ -386,7 +386,7 @@ render(<BaseExample />);
 | onLoader | `() => Promise<void>` | — | 触发加载的回调函数，支持异步操作 |
 | isLoading | `boolean` | — | 是否正在加载中，加载中时显示 Spin 且不重复触发 |
 | completeTips | `string` | `"已加载全部数据"` | 全部数据加载完毕后的提示文案 |
-| maxFullCount | `number` | `3` | 内容不足以产生滚动条时，自动加载的最大次数 |
+| maxFullCount | `number` | `3` | 内容不足以产生滚动条时，自动补载的最大次数；仍填不满则放弃补载。有滚动条后的正常下拉加载不受此限制，直到 `noMore`（如 totalCount 加载完） |
 | useSimpleBar | `boolean` | `true` | 是否使用 SimpleBar 作为滚动容器；`false` 则使用原生 div 滚动 |
 | children | `ReactNode` | — | 列表内容，通常为数据渲染结果 |
 
