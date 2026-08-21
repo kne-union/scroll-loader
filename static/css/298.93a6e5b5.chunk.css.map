@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/298.bc3f0327.chunk.css","mappings":"AAAA,yBAEE,8BAA+B,CAD/B,iBAEF,CAEA,yBACE,UAAW,CACX,UACF","sources":["../../dist/style.module.scss"],"sourcesContent":[".scroller-no-more {\n  text-align: center;\n  color: var(--font-color-grey-2);\n}\n\n.load-sentinel {\n  height: 1px;\n  width: 100%;\n}"],"names":[],"sourceRoot":""}

@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunk_scroll_loader_0_1_15||=[]).push([[298],{70701(l,r,e){e.r(r);const o={ScrollLoader:e(69666).A};e.d(r,["default",0,o,"manifest",0,{name:"scroll-loader",version:"0.1.15","open-version":!0,"public-url":"/scroll-loader",modules:[{name:"scroll-loader",baseDir:"/home/runner/work/scroll-loader/scroll-loader",description:"\u6eda\u52a8\u52a0\u8f7d\u4e0b\u4e00\u9875\u6570\u636e.",packageName:"@kne/scroll-loader"}]}])}}]);
+//# sourceMappingURL=298.3d937771.chunk.js.map
